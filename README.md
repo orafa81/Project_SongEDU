@@ -6,20 +6,20 @@
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
 
-[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=for-the-badge)](#contributors-) ![Codecov](https://img.shields.io/codecov/c/gh/ixahmedxi/noodle?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/ixahmedxi/noodle?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ixahmedxi/noodle/main?style=for-the-badge)
+<!--[![All Contributors](https://img.shields.io/badge/all_contributors-4-orange.svg?style=for-the-badge)](#contributors-) ![Codecov](https://img.shields.io/codecov/c/gh/ixahmedxi/noodle?style=for-the-badge) ![GitHub top language](https://img.shields.io/github/languages/top/ixahmedxi/noodle?style=for-the-badge) ![GitHub last commit (branch)](https://img.shields.io/github/last-commit/ixahmedxi/noodle/main?style=for-the-badge)-->
 
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 > **Warning**
-> This is a work-in-progress and not the finished product.
+> Esse projeto está em andamento, portanto não está finalizado.
 >
-> Feel free to leave feature suggestions but please don't open issues for bugs or support requests just yet.
+> Sinta-se à vontade para deixar sugesões de melhorias para atualizações futuras.
 >
-> Follow me on twitter [@ixahmedxii](https://twitter.com/ixahmedxii) for updates.
+<!--Follow me on twitter [@ixahmedxii](https://twitter.com/ixahmedxii) for updates.
 
-![Noodle Preview](https://github.com/ixahmedxi/noodle/blob/main/apps/web/public/preview.png?raw=true)
+[SongEDU Preview](https://github.com/ixahmedxi/noodle/blob/main/apps/web/public/preview.png?raw=true)
 
-## Features
+## Caracteristicas
 
 - 📁 Module/Subject Management
 - 📒 Note taking
@@ -51,9 +51,9 @@ As an open-source platform, Noodle strives to cultivate a community of students 
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
-<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
-<!-- prettier-ignore-start -->
-<!-- markdownlint-disable -->
+ ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section 
+ prettier-ignore-start 
+ markdownlint-disable 
 <table>
   <tbody>
     <tr>
@@ -70,4 +70,4 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 <!-- ALL-CONTRIBUTORS-LIST:END -->
 
-This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
+<!--This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!-->
