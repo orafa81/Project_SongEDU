@@ -12,12 +12,16 @@ public class ChangeColorOnKeyPress : MonoBehaviour
     private Color originalColor;
     public AudioSource noteSound;
     public float releaseTime = 0.1f; // Tempo em segundos antes de parar de tocar o som
+    public float maxNoteDuration = 2.0f;
+
 
     private AudioSource audioSource;
     private bool isPlaying;
     private float releaseTimer;
     private bool buttonPressed;
     private float lastClickTime;
+    private float noteStartTime;
+
 
     private void Start()
     {
@@ -25,7 +29,7 @@ public class ChangeColorOnKeyPress : MonoBehaviour
         originalColor = button.image.color;
 
         audioSource = GetComponent<AudioSource>();
-        button.onClick.AddListener(OnButtonClick);
+        button.onClick.AddListener(OnButtonClicked);
     }
 
     private void Update()
@@ -44,12 +48,14 @@ public class ChangeColorOnKeyPress : MonoBehaviour
             button.image.color = originalColor;
         }
 
-        if (buttonPressed && !isPlaying)
+        if (buttonPressed)
         {
-            PlayNote();
+            if (!isPlaying)
+            {
+                PlayNote();
+            }
         }
-
-        if (!buttonPressed && isPlaying)
+        else if (isPlaying)
         {
             releaseTimer = releaseTime;
         }
@@ -62,6 +68,11 @@ public class ChangeColorOnKeyPress : MonoBehaviour
                 StopNote();
             }
         }
+
+        if (isPlaying && Time.time - noteStartTime >= maxNoteDuration)
+        {
+            StopNote();
+        }
     }
 
     private void PlayNote()
@@ -69,6 +80,8 @@ public class ChangeColorOnKeyPress : MonoBehaviour
         isPlaying = true;
         audioSource = noteSound;
         audioSource.Play();
+        noteStartTime = Time.time;
+
     }
 
     private void StopNote()
@@ -88,31 +101,21 @@ public class ChangeColorOnKeyPress : MonoBehaviour
         releaseTimer = releaseTime;
     }*/
 
-    private void OnButtonClick()
+    private void OnButtonClicked()
     {
-        /*if (buttonPressed)
-        {
-            releaseTimer = releaseTime;
-        }
-        else
-        {
-            PlayNote();
-        }
-
-        buttonPressed = !buttonPressed;*/
         float currentTime = Time.time;
 
         if (currentTime - lastClickTime > releaseTime)
         {
             PlayNote();
+            lastClickTime = currentTime;
         }
-
         else
         {
-            StopNote();
+            buttonPressed = !buttonPressed;
+            lastClickTime = 0f;
         }
-
-        lastClickTime = currentTime;
-        buttonPressed = !buttonPressed;
     }
 }
+
+
