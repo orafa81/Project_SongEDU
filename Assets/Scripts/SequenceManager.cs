@@ -1,21 +1,44 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
-using System.Collections.Generic;
 
 public class SequenceManager : MonoBehaviour
 {
-    public List<NoteSequence> sequences; // Lista de sequências
-    private int currentSequenceIndex = 0; // Índice da sequência atual
-    private int currentNoteIndex = 0;
-    private bool isPlaying = false;
-    private int incorrectAttempts = 0;
+    [System.Serializable]
+    public struct NoteConfig
+    {
+        public NoteKey noteKey;
+        public float noteDuration;
+        public Color pressedColor;
+    }
 
-    public GameObject infoPanel;
-    private bool showInfoPanel = false;
-
-    private NoteConfig[] noteConfigs;
+    public NoteConfig[] noteConfigs;
+    private KeySoundManager soundManager;
     private Coroutine sequenceCoroutine;
+    private int currentNoteIndex = 0;
+    private int incorrectAttempts = 0;
+    private int maxIncorrectAttempts = 3;
+    private bool isPlaying = false;
+    private bool shouldShowInfoPanel = false; // Flag para mostrar o painel de informações
+
+    public GameObject infoPanel; // Adicione uma referência ao painel de informações no Inspector
+
+    public bool IsPlayingSequence { get { return isPlaying; } }
+    public bool IsRepeating { get { return currentNoteIndex < noteConfigs.Length; } }
+
+    private void Start()
+    {
+        soundManager = FindObjectOfType<KeySoundManager>();
+    }
+
+    private void Update()
+    {
+        if (shouldShowInfoPanel)
+        {
+            infoPanel.SetActive(true);
+            shouldShowInfoPanel = false; // Para evitar que o painel seja exibido repetidamente
+        }
+    }
 
     public void StartNoteSequence()
     {
@@ -24,22 +47,7 @@ public class SequenceManager : MonoBehaviour
             isPlaying = true;
             currentNoteIndex = 0;
             incorrectAttempts = 0;
-
-            NoteSequence currentSequence = sequences[currentSequenceIndex];
-
-            if (currentSequence.notes.Length == 0)
-            {
-                Debug.Log("A sequência está vazia. Finalizando o jogo ou outra ação apropriada.");
-                return;
-            }
-
-            noteConfigs = new NoteConfig[currentSequence.notes.Length];
-
-            for (int i = 0; i < currentSequence.notes.Length; i++)
-            {
-                noteConfigs[i] = GetNoteConfig(currentSequence.notes[i]);
-            }
-
+            
             if (sequenceCoroutine != null)
             {
                 StopCoroutine(sequenceCoroutine);
@@ -48,31 +56,52 @@ public class SequenceManager : MonoBehaviour
         }
     }
 
+    public bool CheckPlayerInput(int playerNoteIndex)
+    {
+        if (!IsRepeating)
+        {
+            Debug.Log("O jogador tentou tocar mais notas do que a sequência alvo.");
+            return false;
+        }
+
+        if (noteConfigs[currentNoteIndex].noteKey.noteIndex != playerNoteIndex)
+        {
+            Debug.Log("Erro! A nota tocada está incorreta.");
+
+            incorrectAttempts++;
+
+            if (incorrectAttempts >= maxIncorrectAttempts)
+            {
+                Debug.Log("Você errou 3 vezes. Reiniciando a sequência.");
+                shouldShowInfoPanel = true; // Defina para exibir o painel de informações após 3 tentativas incorretas
+                RestartSequence();
+            }
+
+            return false;
+        }
+
+        currentNoteIndex++;
+
+        if (!IsRepeating)
+        {
+            Debug.Log("Sequência repetida com sucesso!");
+            incorrectAttempts = 0; // Reinicia as tentativas incorretas quando a sequência é repetida corretamente
+        }
+
+        return true;
+    }
+
     private IEnumerator PlayNoteSequence()
     {
-        while (currentNoteIndex < noteConfigs.Length)
+        foreach (var config in noteConfigs)
         {
-            NoteConfig currentNote = noteConfigs[currentNoteIndex];
-            PlaySound(currentNote.sound);
-            yield return new WaitForSeconds(currentNote.duration);
-            currentNoteIndex++;
+            Color originalColor = config.noteKey.GetComponent<Image>().color;
+            config.noteKey.GetComponent<Image>().color = config.pressedColor;
+            soundManager.PlayNoteSound(config.noteKey.noteIndex, config.noteDuration);
+            yield return new WaitForSeconds(config.noteDuration);
+            config.noteKey.GetComponent<Image>().color = originalColor;
         }
-
-        if (currentNoteIndex == noteConfigs.Length)
-        {
-            isPlaying = false;
-        }
-    }
-
-    private NoteConfig GetNoteConfig(int noteIndex)
-    {
-        return noteConfigs[noteIndex];
-    }
-
-    private void PlaySound(AudioClip sound)
-    {
-        // Implemente a lógica para tocar o som da nota aqui
-        // Isso pode envolver a reprodução de um som ou outra ação relacionada ao som da nota
+        isPlaying = false;
     }
 
     private void RestartSequence()
@@ -83,37 +112,29 @@ public class SequenceManager : MonoBehaviour
 
         if (incorrectAttempts >= maxIncorrectAttempts)
         {
-            shouldShowInfoPanel = true;
+            shouldShowInfoPanel = true; // Defina para exibir o painel de informações após 3 tentativas incorretas
         }
 
+        // Chame a corrotina para controlar a exibição do painel e a repetição da sequência
         StartCoroutine(ShowInfoPanelAndRestart());
     }
-
-    private IEnumerator ShowInfoPanelAndRestart()
+    
+     private IEnumerator ShowInfoPanelAndRestart()
     {
-        if (showInfoPanel)
+        if (shouldShowInfoPanel)
         {
             infoPanel.SetActive(true);
-            float delayTime = 5.0f;
+
+            // Aguarde por X segundos (substitua X pelo tempo desejado)
+            float delayTime = 3.0f; // Exemplo: 5 segundos
             yield return new WaitForSeconds(delayTime);
+
+            // Oculte o painel de informações
             infoPanel.SetActive(false);
 
-            AdvanceToNextSequence(); // Avança para a próxima sequência
-        }
-    }
-
-    private void AdvanceToNextSequence()
-    {
-        currentSequenceIndex++;
-
-        if (currentSequenceIndex >= sequences.Count)
-        {
-            Debug.Log("Você completou todas as sequências disponíveis. Pode adicionar mais sequências se desejar.");
-            // Lógica de fim de jogo aqui, por exemplo, mostrar tela de vitória ou encerrar o jogo.
-        }
-        else
-        {
-            StartNoteSequence(); // Inicie a próxima sequência
+            // Reinicie a sequência após o tempo definido
+            StartNoteSequence();
         }
     }
 }
+

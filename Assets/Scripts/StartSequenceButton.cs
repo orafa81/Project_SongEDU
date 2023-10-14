@@ -5,19 +5,19 @@ public class StartSequenceButton : MonoBehaviour
 {
     public SequenceManager sequenceManager;
     public Button startButton;
-    public GameObject infoPanel; // Adicione uma referência ao painel de informações
+    public GameObject infoPanel; // Adicione uma referÃªncia ao painel de informaÃ§Ãµes
 
     private void Start()
     {
         startButton.onClick.AddListener(StartSequence);
-        infoPanel.SetActive(false); // Certifique-se de que o painel de informações esteja desativado inicialmente
+        infoPanel.SetActive(false); // Certifique-se de que o painel de informaÃ§Ãµes esteja desativado inicialmente
     }
 
     private void StartSequence()
     {
         if (!sequenceManager.IsPlayingSequence)
         {
-            // Desative o painel de informações antes de iniciar a sequência manualmente
+            // Desative o painel de informaÃ§Ãµes antes de iniciar a sequÃªncia manualmente
             infoPanel.SetActive(false);
             sequenceManager.StartNoteSequence();
         }
