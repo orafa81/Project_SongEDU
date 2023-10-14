@@ -168,6 +168,15 @@ MonoBehaviour:
   - noteKey: {fileID: 2140852025}
     noteDuration: 1
     pressedColor: {r: 0.40392157, g: 0.41568628, b: 0.40392157, a: 1}
+  - noteKey: {fileID: 1609106992}
+    noteDuration: 1
+    pressedColor: {r: 0.40392157, g: 0.41568628, b: 0.40392157, a: 1}
+  - noteKey: {fileID: 237618323}
+    noteDuration: 1
+    pressedColor: {r: 0.40392157, g: 0.41568628, b: 0.40392157, a: 1}
+  - noteKey: {fileID: 237618323}
+    noteDuration: 1
+    pressedColor: {r: 0.40392157, g: 0.41568628, b: 0.40392157, a: 1}
   infoPanel: {fileID: 1024018537}
 --- !u!4 &36842987
 Transform:
