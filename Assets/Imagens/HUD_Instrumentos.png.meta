@@ -1,0 +1,973 @@
+fileFormatVersion: 2
+guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: HUD_Instrumentos_1
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 3346
+        width: 493
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967ab0f30911594d69070dae7f172470
+      internalID: -481196836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_2
+      rect:
+        serializedVersion: 2
+        x: 2054
+        y: 3346
+        width: 488
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99ea0156a3a2579128bbe4075b1b7946
+      internalID: -1611573112
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_3
+      rect:
+        serializedVersion: 2
+        x: 2765
+        y: 3346
+        width: 506
+        height: 485
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dfb3148a91778433ae40113dab43d8e
+      internalID: 1989457064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_4
+      rect:
+        serializedVersion: 2
+        x: 3619
+        y: 3348
+        width: 446
+        height: 498
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 014c721ff00732efeb851fd4e8cfd0f3
+      internalID: 1930231431
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_5
+      rect:
+        serializedVersion: 2
+        x: 4421
+        y: 3346
+        width: 490
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b38b5c0f42d038512839072decce9c28
+      internalID: -289341513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_9
+      rect:
+        serializedVersion: 2
+        x: 1226
+        y: 3482
+        width: 494
+        height: 224
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b3e17370c7640590b7f9cdcb49699d4
+      internalID: 1435319134
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_26
+      rect:
+        serializedVersion: 2
+        x: 3711
+        y: 2676
+        width: 256
+        height: 545
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee989616a3bdaf19c9554e085eec4e87
+      internalID: -1288622395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_28
+      rect:
+        serializedVersion: 2
+        x: 2052
+        y: 2718
+        width: 517
+        height: 472
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04bc993cd779ab883aced7631be4a5db
+      internalID: -45031869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_30
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 2692
+        width: 516
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 85be44840e6d4ede5a70ddeae0fb2b58
+      internalID: 106135799
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_32
+      rect:
+        serializedVersion: 2
+        x: 4481
+        y: 2692
+        width: 376
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70f924180abe5f8759e89c1c0c6922cb
+      internalID: 180903394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_33
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2736
+        width: 493
+        height: 428
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ec9d092e8ad27ef3be52437dc25e7bd
+      internalID: -1013852384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_35
+      rect:
+        serializedVersion: 2
+        x: 1177
+        y: 2709
+        width: 496
+        height: 473
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80b5238aa217326a1ac3b4a691915c18
+      internalID: 176185382
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_64
+      rect:
+        serializedVersion: 2
+        x: 1182
+        y: 1981
+        width: 488
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 706567e23548626edb194326fa343fa6
+      internalID: -1012820610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_65
+      rect:
+        serializedVersion: 2
+        x: 2024
+        y: 1976
+        width: 412
+        height: 503
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 896e9a6f200ef7429822602ed5be8121
+      internalID: -1187107998
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_66
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 1991
+        width: 506
+        height: 465
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0a25c3ba538c890758eb953a0fbeec67
+      internalID: -1590738700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_68
+      rect:
+        serializedVersion: 2
+        x: 4469
+        y: 1976
+        width: 405
+        height: 515
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac6789a703c14d27be026ec6b2c46ba
+      internalID: 1323314614
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_69
+      rect:
+        serializedVersion: 2
+        x: 398
+        y: 2054
+        width: 499
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 23974193cecde6a10ae77a4c0f56b594
+      internalID: 744930246
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_73
+      rect:
+        serializedVersion: 2
+        x: 3640
+        y: 2130
+        width: 511
+        height: 219
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dffb9c699541a3ea2aa09bbac04b1ce1
+      internalID: 1530160182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_89
+      rect:
+        serializedVersion: 2
+        x: 388
+        y: 1183
+        width: 516
+        height: 530
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4d03e12f9499b00e8dd6a48852c770b
+      internalID: -1568439155
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_93
+      rect:
+        serializedVersion: 2
+        x: 3736
+        y: 1208
+        width: 314
+        height: 506
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fa9a20075d63c30c95cf21e68c0885a
+      internalID: 300716534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_94
+      rect:
+        serializedVersion: 2
+        x: 1168
+        y: 1215
+        width: 517
+        height: 497
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e7c121f445a099ef8c9e0674f247039
+      internalID: 1078727905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_97
+      rect:
+        serializedVersion: 2
+        x: 2768
+        y: 1213
+        width: 500
+        height: 490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a07470475b9cd54cda616dd2836b3869
+      internalID: 419270806
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_101
+      rect:
+        serializedVersion: 2
+        x: 1987
+        y: 1244
+        width: 505
+        height: 422
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 26158cbbc0dbfe63eb69892b4c746293
+      internalID: 723548676
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_109
+      rect:
+        serializedVersion: 2
+        x: 4397
+        y: 1284
+        width: 532
+        height: 346
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a73db9e64c4e289cb09ac62272c3dff
+      internalID: 1613069203
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_143
+      rect:
+        serializedVersion: 2
+        x: 2763
+        y: 1213
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76eedd20f499eea17a99f3339049ceed
+      internalID: -2039184018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_153
+      rect:
+        serializedVersion: 2
+        x: 417
+        y: 470
+        width: 464
+        height: 496
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55bfc121f7517c372a69c6803523dd6c
+      internalID: -1165165641
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_155
+      rect:
+        serializedVersion: 2
+        x: 2039
+        y: 466
+        width: 386
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8475a4d70b2617c48afc8bba86272046
+      internalID: -789701832
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_157
+      rect:
+        serializedVersion: 2
+        x: 2755
+        y: 466
+        width: 515
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 601d7813e4bf13d43a0bdde1ce35e6f0
+      internalID: 1336255019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_158
+      rect:
+        serializedVersion: 2
+        x: 3722
+        y: 456
+        width: 344
+        height: 525
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ecbe600e2cd742cda038e13f04f46c4
+      internalID: 2133801926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_161
+      rect:
+        serializedVersion: 2
+        x: 1260
+        y: 466
+        width: 319
+        height: 495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7a09c85aa56753e5916e70a1fbae947
+      internalID: -1412864863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_Instrumentos_164
+      rect:
+        serializedVersion: 2
+        x: 4422
+        y: 466
+        width: 484
+        height: 493
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffef85e479dd640e2bd18de2d3b315cf
+      internalID: -1207959085
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      HUD_Instrumentos_0: 13945984
+      HUD_Instrumentos_1: -481196836
+      HUD_Instrumentos_10: -1913935978
+      HUD_Instrumentos_100: 490907318
+      HUD_Instrumentos_101: 723548676
+      HUD_Instrumentos_102: -5680936
+      HUD_Instrumentos_103: -1486368444
+      HUD_Instrumentos_104: -1395602235
+      HUD_Instrumentos_105: -1127222411
+      HUD_Instrumentos_106: 93090293
+      HUD_Instrumentos_107: -551269557
+      HUD_Instrumentos_108: 1146976886
+      HUD_Instrumentos_109: 1613069203
+      HUD_Instrumentos_11: 1767049439
+      HUD_Instrumentos_110: -306311343
+      HUD_Instrumentos_111: -181930437
+      HUD_Instrumentos_112: 668135462
+      HUD_Instrumentos_113: 721559255
+      HUD_Instrumentos_114: -1156024209
+      HUD_Instrumentos_115: -1056847748
+      HUD_Instrumentos_116: -1006046333
+      HUD_Instrumentos_117: -223538596
+      HUD_Instrumentos_118: 236319080
+      HUD_Instrumentos_119: -712153753
+      HUD_Instrumentos_12: -1495635128
+      HUD_Instrumentos_120: -1702428264
+      HUD_Instrumentos_121: 1932469734
+      HUD_Instrumentos_122: -1057922148
+      HUD_Instrumentos_123: -1814194958
+      HUD_Instrumentos_124: -764383237
+      HUD_Instrumentos_125: 358206258
+      HUD_Instrumentos_126: 9572520
+      HUD_Instrumentos_127: 3305497
+      HUD_Instrumentos_128: 1398832290
+      HUD_Instrumentos_129: 999302128
+      HUD_Instrumentos_13: -76987659
+      HUD_Instrumentos_130: -1908071425
+      HUD_Instrumentos_131: -1018374216
+      HUD_Instrumentos_132: -406563426
+      HUD_Instrumentos_133: -325049685
+      HUD_Instrumentos_134: 1696062483
+      HUD_Instrumentos_135: 216435766
+      HUD_Instrumentos_136: -1996233465
+      HUD_Instrumentos_137: 1440670990
+      HUD_Instrumentos_138: -1407181394
+      HUD_Instrumentos_139: -715568982
+      HUD_Instrumentos_14: 779075802
+      HUD_Instrumentos_140: -852319329
+      HUD_Instrumentos_141: 1689526128
+      HUD_Instrumentos_142: -686785742
+      HUD_Instrumentos_143: -2039184018
+      HUD_Instrumentos_144: 675279841
+      HUD_Instrumentos_145: -1098537385
+      HUD_Instrumentos_146: -1159542767
+      HUD_Instrumentos_147: -1189489400
+      HUD_Instrumentos_148: 2023566747
+      HUD_Instrumentos_149: 1410862970
+      HUD_Instrumentos_15: 951910375
+      HUD_Instrumentos_150: 1865921253
+      HUD_Instrumentos_151: 52626461
+      HUD_Instrumentos_152: 865730148
+      HUD_Instrumentos_153: -1165165641
+      HUD_Instrumentos_154: 1484077793
+      HUD_Instrumentos_155: -789701832
+      HUD_Instrumentos_156: 1076759021
+      HUD_Instrumentos_157: 1336255019
+      HUD_Instrumentos_158: 2133801926
+      HUD_Instrumentos_159: -1483875871
+      HUD_Instrumentos_16: 624276084
+      HUD_Instrumentos_160: 189179461
+      HUD_Instrumentos_161: -1412864863
+      HUD_Instrumentos_162: -1468538903
+      HUD_Instrumentos_163: -2031896096
+      HUD_Instrumentos_164: -1207959085
+      HUD_Instrumentos_165: 1874783648
+      HUD_Instrumentos_166: -1762718311
+      HUD_Instrumentos_167: 236634288
+      HUD_Instrumentos_168: 1455426635
+      HUD_Instrumentos_169: -459469196
+      HUD_Instrumentos_17: 1242846292
+      HUD_Instrumentos_170: 1130596273
+      HUD_Instrumentos_171: 1370879831
+      HUD_Instrumentos_172: 253785087
+      HUD_Instrumentos_173: -1458695816
+      HUD_Instrumentos_174: -251362211
+      HUD_Instrumentos_175: -898947383
+      HUD_Instrumentos_176: -1670037450
+      HUD_Instrumentos_177: 765506710
+      HUD_Instrumentos_178: 872721989
+      HUD_Instrumentos_179: -2051853764
+      HUD_Instrumentos_18: 821349747
+      HUD_Instrumentos_180: 1619039535
+      HUD_Instrumentos_181: 2032901738
+      HUD_Instrumentos_182: -1326146095
+      HUD_Instrumentos_183: -844177959
+      HUD_Instrumentos_184: 1029439265
+      HUD_Instrumentos_185: 682847853
+      HUD_Instrumentos_186: 552376006
+      HUD_Instrumentos_19: -914315536
+      HUD_Instrumentos_2: -1611573112
+      HUD_Instrumentos_20: -452360287
+      HUD_Instrumentos_21: -166705387
+      HUD_Instrumentos_22: 1216863205
+      HUD_Instrumentos_23: -1919748787
+      HUD_Instrumentos_24: -45959019
+      HUD_Instrumentos_25: -234307405
+      HUD_Instrumentos_26: -1288622395
+      HUD_Instrumentos_27: 87961715
+      HUD_Instrumentos_28: -45031869
+      HUD_Instrumentos_29: -724978914
+      HUD_Instrumentos_3: 1989457064
+      HUD_Instrumentos_30: 106135799
+      HUD_Instrumentos_31: -457428140
+      HUD_Instrumentos_32: 180903394
+      HUD_Instrumentos_33: -1013852384
+      HUD_Instrumentos_34: 1337886688
+      HUD_Instrumentos_35: 176185382
+      HUD_Instrumentos_36: -1879110974
+      HUD_Instrumentos_37: 159568010
+      HUD_Instrumentos_38: -1142678219
+      HUD_Instrumentos_39: 2045857788
+      HUD_Instrumentos_4: 1930231431
+      HUD_Instrumentos_40: -781649578
+      HUD_Instrumentos_41: -455831773
+      HUD_Instrumentos_42: -1160417241
+      HUD_Instrumentos_43: -346656488
+      HUD_Instrumentos_44: 1036624269
+      HUD_Instrumentos_45: -36544688
+      HUD_Instrumentos_46: 964136914
+      HUD_Instrumentos_47: 875948335
+      HUD_Instrumentos_48: 2010927211
+      HUD_Instrumentos_49: -1079683021
+      HUD_Instrumentos_5: -289341513
+      HUD_Instrumentos_50: -686895470
+      HUD_Instrumentos_51: 937939841
+      HUD_Instrumentos_52: -1121041726
+      HUD_Instrumentos_53: 2013899210
+      HUD_Instrumentos_54: -1346879944
+      HUD_Instrumentos_55: -1570317116
+      HUD_Instrumentos_56: 1832055347
+      HUD_Instrumentos_57: 958577520
+      HUD_Instrumentos_58: 57394950
+      HUD_Instrumentos_59: 593957187
+      HUD_Instrumentos_6: 1792782200
+      HUD_Instrumentos_60: -600175710
+      HUD_Instrumentos_61: -537302292
+      HUD_Instrumentos_62: -495914008
+      HUD_Instrumentos_63: 1261090424
+      HUD_Instrumentos_64: -1012820610
+      HUD_Instrumentos_65: -1187107998
+      HUD_Instrumentos_66: -1590738700
+      HUD_Instrumentos_67: -889664737
+      HUD_Instrumentos_68: 1323314614
+      HUD_Instrumentos_69: 744930246
+      HUD_Instrumentos_7: -383040956
+      HUD_Instrumentos_70: 468697420
+      HUD_Instrumentos_71: -1234044176
+      HUD_Instrumentos_72: 1878462433
+      HUD_Instrumentos_73: 1530160182
+      HUD_Instrumentos_74: 1541607892
+      HUD_Instrumentos_75: -1458746759
+      HUD_Instrumentos_76: 417796224
+      HUD_Instrumentos_77: 719027608
+      HUD_Instrumentos_78: -333733054
+      HUD_Instrumentos_79: -1519894214
+      HUD_Instrumentos_8: -418328232
+      HUD_Instrumentos_80: -828598429
+      HUD_Instrumentos_81: 2135781920
+      HUD_Instrumentos_82: 1783060650
+      HUD_Instrumentos_83: -406900595
+      HUD_Instrumentos_84: -1969169112
+      HUD_Instrumentos_85: -198141412
+      HUD_Instrumentos_86: 1827062267
+      HUD_Instrumentos_87: 1904455456
+      HUD_Instrumentos_88: 1237384533
+      HUD_Instrumentos_89: -1568439155
+      HUD_Instrumentos_9: 1435319134
+      HUD_Instrumentos_90: -1676293724
+      HUD_Instrumentos_91: -987129004
+      HUD_Instrumentos_92: -994723319
+      HUD_Instrumentos_93: 300716534
+      HUD_Instrumentos_94: 1078727905
+      HUD_Instrumentos_95: -631204288
+      HUD_Instrumentos_96: 651282015
+      HUD_Instrumentos_97: 419270806
+      HUD_Instrumentos_98: 1313857402
+      HUD_Instrumentos_99: 1344868505
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
