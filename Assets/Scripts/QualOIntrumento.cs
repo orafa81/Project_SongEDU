@@ -99,6 +99,7 @@ public class QualOIntrumento : MonoBehaviour
                 pontos++;
                 idInstrumento++;
                 svAlt = "";
+                nomeIntrumento.text = "Qual é o Instrumento?";
                 somIntrumento.clip =  sonsInstrumentos[idInstrumento];
                 instrumentoA.sprite = instrumentosA[idInstrumento];
                 instrumentoB.sprite = instrumentosB[idInstrumento];
@@ -117,6 +118,7 @@ public class QualOIntrumento : MonoBehaviour
                 pontos++;
                 idInstrumento++;
                 svAlt = "";
+                nomeIntrumento.text = "Qual é o Instrumento?";
                 somIntrumento.clip =  sonsInstrumentos[idInstrumento];
                 instrumentoA.sprite = instrumentosA[idInstrumento];
                 instrumentoB.sprite = instrumentosB[idInstrumento];
@@ -134,6 +136,7 @@ public class QualOIntrumento : MonoBehaviour
                 pontos++;
                 idInstrumento++;
                 svAlt = "";
+                nomeIntrumento.text = "Qual é o Instrumento?";
                 somIntrumento.clip =  sonsInstrumentos[idInstrumento];
                 instrumentoA.sprite = instrumentosA[idInstrumento];
                 instrumentoB.sprite = instrumentosB[idInstrumento];
@@ -152,6 +155,7 @@ public class QualOIntrumento : MonoBehaviour
                 pontos++;
                 idInstrumento++;
                 svAlt = "";
+                nomeIntrumento.text = "Qual é o Instrumento?";
                 somIntrumento.clip =  sonsInstrumentos[idInstrumento];
                 instrumentoA.sprite = instrumentosA[idInstrumento];
                 instrumentoB.sprite = instrumentosB[idInstrumento];
