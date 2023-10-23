@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using TMPro.Examples;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 
 public class QualOIntrumento : MonoBehaviour
 {
-
+    public string nomeDaCenaAtual;
+    
     public AudioSource somIntrumento;
+    // public AudioSource somIntrumentoA;
+    // public AudioSource somIntrumentoB;
+    // public AudioSource somIntrumentoC;
+    // public AudioSource somIntrumentoD;
     public Text nomeIntrumento;
     public Text txtPontos;
     public Image instrumentoA;
@@ -18,6 +24,10 @@ public class QualOIntrumento : MonoBehaviour
     
 
     public AudioClip[] sonsInstrumentos;
+    // public AudioClip[] sonsInstrumentosA;
+    // public AudioClip[] sonsInstrumentosB;
+    // public AudioClip[] sonsInstrumentosC;
+    // public AudioClip[] sonsInstrumentosD;
     public Sprite[] instrumentosA;
     public Sprite[] instrumentosB;
     public Sprite[] instrumentosC;
@@ -28,9 +38,12 @@ public class QualOIntrumento : MonoBehaviour
     public string[] nomesInstrumentosB;
     public string[] nomesInstrumentosC;
     public string[] nomesInstrumentosD;
+    
+    public GameObject[] feedBackErros;
 
     private int idInstrumento;
     private int pontos;
+    private int erros;
 
     private string svAlt;
 
@@ -40,13 +53,13 @@ public class QualOIntrumento : MonoBehaviour
         pontos = 0;
         somIntrumento = GetComponent<AudioSource>();
         somIntrumento.clip =  sonsInstrumentos[idInstrumento];
-        
+        // somIntrumentoA.clip =  sonsInstrumentosA[idInstrumento];
+        // somIntrumentoB.clip =  sonsInstrumentosB[idInstrumento];
+        // somIntrumentoC.clip =  sonsInstrumentosC[idInstrumento];
+        // somIntrumentoD.clip =  sonsInstrumentosD[idInstrumento];
         instrumentoA.sprite = instrumentosA[idInstrumento];
-    
         instrumentoB.sprite = instrumentosB[idInstrumento];
-    
         instrumentoC.sprite = instrumentosC[idInstrumento];
-
         instrumentoD.sprite = instrumentosD[idInstrumento];
 
         txtPontos.text = "Acertos: " + pontos.ToString();
@@ -57,58 +70,120 @@ public class QualOIntrumento : MonoBehaviour
         if (alternativa == "A")
         {
             nomeIntrumento.text = nomesInstrumentosA[idInstrumento];
-            if (instrumentosA[idInstrumento] == corretos[idInstrumento])
-            {
-                svAlt = alternativa;
-            }
+            svAlt = alternativa;
+            
         } else if (alternativa == "B")
         {
             nomeIntrumento.text = nomesInstrumentosB[idInstrumento];
-            if (instrumentosB[idInstrumento] == corretos[idInstrumento])
-            {
-                svAlt = alternativa;
-            }
+            svAlt = alternativa;
+            
         } else if (alternativa == "C")
         {
             nomeIntrumento.text = nomesInstrumentosC[idInstrumento];
-            if (instrumentosC[idInstrumento] == corretos[idInstrumento])
-            {
-                svAlt = alternativa;
-            }
+            svAlt = alternativa;
         } else if (alternativa == "D")
         {
             nomeIntrumento.text = nomesInstrumentosD[idInstrumento];
-            if (instrumentosD[idInstrumento] == corretos[idInstrumento])
-            {
-                
-                svAlt = alternativa;
-            }
+            svAlt = alternativa;
         }
         
     }
 
     public void proximaPergunta(){
         string alter = svAlt;
+        print(idInstrumento);
         if (alter == "A")
         {
-            print("Teste");
-            pontos++;
+            if (instrumentosA[idInstrumento] == corretos[idInstrumento])
+            {
+                pontos++;
+                idInstrumento++;
+                svAlt = "";
+                somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                instrumentoA.sprite = instrumentosA[idInstrumento];
+                instrumentoB.sprite = instrumentosB[idInstrumento];
+                instrumentoC.sprite = instrumentosC[idInstrumento];
+                instrumentoD.sprite = instrumentosD[idInstrumento];
+                txtPontos.text = "Acertos: " + pontos.ToString();
+            }
+            else
+            {
+                erros++;
+            }
         } else if (alter == "B")
         {
-            pontos++;
+            if (instrumentosB[idInstrumento] == corretos[idInstrumento])
+            {
+                pontos++;
+                idInstrumento++;
+                svAlt = "";
+                somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                instrumentoA.sprite = instrumentosA[idInstrumento];
+                instrumentoB.sprite = instrumentosB[idInstrumento];
+                instrumentoC.sprite = instrumentosC[idInstrumento];
+                instrumentoD.sprite = instrumentosD[idInstrumento];
+                txtPontos.text = "Acertos: " + pontos.ToString();
+            }else
+            {
+                erros++;
+            }
         } else if (alter == "C")
         {
-            pontos++;
+            if (instrumentosC[idInstrumento] == corretos[idInstrumento])
+            {
+                pontos++;
+                idInstrumento++;
+                svAlt = "";
+                somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                instrumentoA.sprite = instrumentosA[idInstrumento];
+                instrumentoB.sprite = instrumentosB[idInstrumento];
+                instrumentoC.sprite = instrumentosC[idInstrumento];
+                instrumentoD.sprite = instrumentosD[idInstrumento];
+                txtPontos.text = "Acertos: " + pontos.ToString();
+                
+            } else
+            {
+                erros++;
+            }
         } else if (alter == "D")
         {
-            pontos++;
+            if (instrumentosD[idInstrumento] == corretos[idInstrumento])
+            {
+                pontos++;
+                idInstrumento++;
+                svAlt = "";
+                somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                instrumentoA.sprite = instrumentosA[idInstrumento];
+                instrumentoB.sprite = instrumentosB[idInstrumento];
+                instrumentoC.sprite = instrumentosC[idInstrumento];
+                instrumentoD.sprite = instrumentosD[idInstrumento];
+                txtPontos.text = "Acertos: " + pontos.ToString();
+            } else
+            {
+                erros++;
+            }
         }
-        idInstrumento++;
-        somIntrumento.clip =  sonsInstrumentos[idInstrumento];
-        instrumentoA.sprite = instrumentosA[idInstrumento];
-        instrumentoB.sprite = instrumentosB[idInstrumento];
-        instrumentoC.sprite = instrumentosC[idInstrumento];
-        instrumentoD.sprite = instrumentosD[idInstrumento];
-        txtPontos.text = "Acertos: " + pontos.ToString();
+        if (erros == 1)
+        {
+            feedBackErros[erros-1].SetActive(false);
+        } else if (erros == 2)
+        {
+            feedBackErros[erros-1].SetActive(false);
+        } else if (erros == 3)
+        {
+            feedBackErros[erros-1].SetActive(false);
+            print(erros);
+            SceneManager.LoadScene (nomeDaCenaAtual);
+        }
+        
+        
     }
+
+    private void verificaErros(){
+        if (erros == 3)
+        {
+            SceneManager.LoadScene (nomeDaCenaAtual);
+        }
+    }
+
 }
