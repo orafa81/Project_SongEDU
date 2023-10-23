@@ -134,6 +134,7 @@ GameObject:
   - component: {fileID: 19432161}
   - component: {fileID: 19432163}
   - component: {fileID: 19432162}
+  - component: {fileID: 19432164}
   m_Layer: 0
   m_Name: Teste
   m_TagString: Untagged
@@ -169,20 +170,42 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   somIntrumento: {fileID: 19432163}
+  nomeIntrumento: {fileID: 1875537355}
+  txtPontos: {fileID: 2095489146}
   instrumentoA: {fileID: 2047076818}
   instrumentoB: {fileID: 245569776}
-  instrumentoC: {fileID: 538878101}
-  instrumentoD: {fileID: 1970257382}
+  instrumentoC: {fileID: 1970257382}
+  instrumentoD: {fileID: 538878101}
   sonsInstrumentos:
+  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
   - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
   instrumentosA:
   - {fileID: 419270806, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  - {fileID: 419270806, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   instrumentosB:
   - {fileID: 106135799, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  - {fileID: -45031869, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   instrumentosC:
+  - {fileID: -1012820610, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   - {fileID: -1012820610, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   instrumentosD:
   - {fileID: -1187107998, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  - {fileID: 1930231431, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  corretos:
+  - {fileID: 419270806, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  - {fileID: 1930231431, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
+  nomesInstrumentosA:
+  - Piano
+  - Piano
+  nomesInstrumentosB:
+  - Guitarra
+  - Clarinete
+  nomesInstrumentosC:
+  - Flauta
+  - Flauta
+  nomesInstrumentosD:
+  - Triangulo
+  - Trompete
 --- !u!82 &19432163
 AudioSource:
   m_ObjectHideFlags: 0
@@ -279,6 +302,19 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &19432164
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19432159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46f1d5bcc5f42f453b2dfdbd24048dc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  btnConfirma: {fileID: 1704285745}
 --- !u!1 &27595252
 GameObject:
   m_ObjectHideFlags: 0
@@ -315,8 +351,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 328.4, y: -256}
-  m_SizeDelta: {x: 150, y: 150}
+  m_AnchoredPosition: {x: -563, y: -75}
+  m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &27595254
 MonoBehaviour:
@@ -394,7 +430,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: -256094053, guid: f201fa087de36dbf59641bcd4e1aa1c8, type: 3}
+  m_Sprite: {fileID: 675867315, guid: 00173b03f28ff29939f914b4368fcb18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -495,7 +531,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 88734118}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 19432164}
+        m_TargetAssemblyTypeName: SelectOpcao, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: A
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &88734118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +761,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 111877196}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 19432164}
+        m_TargetAssemblyTypeName: SelectOpcao, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: B
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &111877196
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,7 +912,7 @@ GameObject:
   - component: {fileID: 538878100}
   - component: {fileID: 538878101}
   m_Layer: 5
-  m_Name: InstrumentoC
+  m_Name: InstrumentoD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1066,7 +1150,7 @@ GameObject:
   - component: {fileID: 988330915}
   - component: {fileID: 988330914}
   m_Layer: 5
-  m_Name: BtnInstrumentoC
+  m_Name: BtnInstrumentoD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1086,7 +1170,7 @@ RectTransform:
   m_Children:
   - {fileID: 538878099}
   m_Father: {fileID: 1545832590}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1136,7 +1220,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 988330915}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 19432164}
+        m_TargetAssemblyTypeName: SelectOpcao, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 3
+          m_FloatArgument: 0
+          m_StringArgument: D
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &988330915
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1290,7 +1398,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1588152174, guid: f201fa087de36dbf59641bcd4e1aa1c8, type: 3}
+  m_Sprite: {fileID: 1665584411, guid: 00173b03f28ff29939f914b4368fcb18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1321,7 +1429,7 @@ GameObject:
   - component: {fileID: 1407465025}
   - component: {fileID: 1407465024}
   m_Layer: 5
-  m_Name: BtnInstrumentoD
+  m_Name: BtnInstrumentoC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1341,7 +1449,7 @@ RectTransform:
   m_Children:
   - {fileID: 1970257384}
   m_Father: {fileID: 1545832590}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1391,7 +1499,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1407465025}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 19432164}
+        m_TargetAssemblyTypeName: SelectOpcao, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: selecioneInstrumento
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 2
+          m_FloatArgument: 0
+          m_StringArgument: C
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1407465025
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1545,7 +1677,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 71449259, guid: f201fa087de36dbf59641bcd4e1aa1c8, type: 3}
+  m_Sprite: {fileID: -1440444973, guid: 00173b03f28ff29939f914b4368fcb18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1658,12 +1790,13 @@ RectTransform:
   - {fileID: 1875537354}
   - {fileID: 88734116}
   - {fileID: 111877194}
-  - {fileID: 988330913}
   - {fileID: 1407465023}
+  - {fileID: 988330913}
   - {fileID: 27595253}
   - {fileID: 1704285744}
   - {fileID: 1454575768}
   - {fileID: 1225106267}
+  - {fileID: 2095489145}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1685,7 +1818,7 @@ GameObject:
   - component: {fileID: 1704285746}
   - component: {fileID: 1704285745}
   m_Layer: 5
-  m_Name: BtnContinuar
+  m_Name: BtnConfirmar
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1730,7 +1863,7 @@ MonoBehaviour:
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
     m_SelectOnRight: {fileID: 0}
-  m_Transition: 2
+  m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
@@ -1750,14 +1883,14 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 0
+  m_Interactable: 1
   m_TargetGraphic: {fileID: 1704285746}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 19432163}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: proximaPergunta
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1787,7 +1920,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 548475605, guid: f201fa087de36dbf59641bcd4e1aa1c8, type: 3}
+  m_Sprite: {fileID: 796936255, guid: 00173b03f28ff29939f914b4368fcb18, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1913,7 +2046,7 @@ GameObject:
   - component: {fileID: 1970257383}
   - component: {fileID: 1970257382}
   m_Layer: 5
-  m_Name: InstrumentoD
+  m_Name: InstrumentoC
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2120,4 +2253,84 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2047076816}
+  m_CullTransparentMesh: 1
+--- !u!1 &2095489144
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2095489145}
+  - component: {fileID: 2095489147}
+  - component: {fileID: 2095489146}
+  m_Layer: 5
+  m_Name: Acertos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &2095489145
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095489144}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1545832590}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -462, y: 18}
+  m_SizeDelta: {x: 278.79, y: 66.28}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &2095489146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095489144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 30
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 2
+    m_MaxSize: 230
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 'Acertos: 0'
+--- !u!222 &2095489147
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095489144}
   m_CullTransparentMesh: 1
