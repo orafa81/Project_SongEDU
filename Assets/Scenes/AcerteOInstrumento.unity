@@ -170,7 +170,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCenaAtual: AcerteOInstrumento
+  btnInstrumentoA: {fileID: 88734117}
+  btnInstrumentoB: {fileID: 111877195}
+  btnInstrumentoC: {fileID: 1407465024}
+  btnInstrumentoD: {fileID: 988330914}
   somIntrumento: {fileID: 19432163}
+  somIntrumentoA: {fileID: 19432163}
+  somIntrumentoB: {fileID: 19432163}
+  somIntrumentoC: {fileID: 19432163}
+  somIntrumentoD: {fileID: 19432163}
   nomeIntrumento: {fileID: 1875537355}
   txtPontos: {fileID: 2095489146}
   instrumentoA: {fileID: 2047076818}
@@ -178,16 +186,60 @@ MonoBehaviour:
   instrumentoC: {fileID: 1970257382}
   instrumentoD: {fileID: 538878101}
   sonsInstrumentos:
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
-  - {fileID: 8300000, guid: 8e9a5abdc84cd5443a0bf2dedca9de9a, type: 3}
+  - {fileID: 8300000, guid: 7ff813e146b5de6db9c42bfdaf2a4a69, type: 3}
+  - {fileID: 8300000, guid: 9dd89a1d00020f485a3bd3deaebc1229, type: 3}
+  - {fileID: 8300000, guid: ae5f385cef4ff61a7a637636cbd56f1e, type: 3}
+  - {fileID: 8300000, guid: 8ea54b595d1460233be31e5f2ba40771, type: 3}
+  - {fileID: 8300000, guid: 6492db34eaa9a1d39b12fc274241256b, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  - {fileID: 8300000, guid: 62de3d92794a13a2fb1ad2aa46938b32, type: 3}
+  - {fileID: 8300000, guid: 3380b1df693788b89b39dc56d324e4b3, type: 3}
+  - {fileID: 8300000, guid: 28388f3168673d290ad261daa8394bc7, type: 3}
+  - {fileID: 8300000, guid: e543a3bb7233bf0088eee19cf6180688, type: 3}
+  sonsInstrumentosA:
+  - {fileID: 8300000, guid: 7ff813e146b5de6db9c42bfdaf2a4a69, type: 3}
+  - {fileID: 8300000, guid: 28388f3168673d290ad261daa8394bc7, type: 3}
+  - {fileID: 8300000, guid: 9dd89a1d00020f485a3bd3deaebc1229, type: 3}
+  - {fileID: 8300000, guid: 28388f3168673d290ad261daa8394bc7, type: 3}
+  - {fileID: 8300000, guid: 6492db34eaa9a1d39b12fc274241256b, type: 3}
+  - {fileID: 8300000, guid: 8ea54b595d1460233be31e5f2ba40771, type: 3}
+  - {fileID: 8300000, guid: e543a3bb7233bf0088eee19cf6180688, type: 3}
+  - {fileID: 8300000, guid: 3380b1df693788b89b39dc56d324e4b3, type: 3}
+  - {fileID: 8300000, guid: 8ea54b595d1460233be31e5f2ba40771, type: 3}
+  - {fileID: 8300000, guid: ae5f385cef4ff61a7a637636cbd56f1e, type: 3}
+  sonsInstrumentosB:
+  - {fileID: 8300000, guid: 9dd89a1d00020f485a3bd3deaebc1229, type: 3}
+  - {fileID: 8300000, guid: 3380b1df693788b89b39dc56d324e4b3, type: 3}
+  - {fileID: 8300000, guid: 62de3d92794a13a2fb1ad2aa46938b32, type: 3}
+  - {fileID: 8300000, guid: 6492db34eaa9a1d39b12fc274241256b, type: 3}
+  - {fileID: 8300000, guid: 62de3d92794a13a2fb1ad2aa46938b32, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  - {fileID: 8300000, guid: ae5f385cef4ff61a7a637636cbd56f1e, type: 3}
+  - {fileID: 8300000, guid: ae5f385cef4ff61a7a637636cbd56f1e, type: 3}
+  - {fileID: 8300000, guid: 62de3d92794a13a2fb1ad2aa46938b32, type: 3}
+  - {fileID: 8300000, guid: 28388f3168673d290ad261daa8394bc7, type: 3}
+  sonsInstrumentosC:
+  - {fileID: 8300000, guid: 3380b1df693788b89b39dc56d324e4b3, type: 3}
+  - {fileID: 8300000, guid: 9dd89a1d00020f485a3bd3deaebc1229, type: 3}
+  - {fileID: 8300000, guid: e543a3bb7233bf0088eee19cf6180688, type: 3}
+  - {fileID: 8300000, guid: 8ea54b595d1460233be31e5f2ba40771, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  - {fileID: 8300000, guid: 62de3d92794a13a2fb1ad2aa46938b32, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  - {fileID: 8300000, guid: e543a3bb7233bf0088eee19cf6180688, type: 3}
+  - {fileID: 8300000, guid: b6d61ebc5dbd83b05bb2111aa29245ec, type: 3}
+  sonsInstrumentosD:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   instrumentosA:
   - {fileID: -481196836, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   - {fileID: -45031869, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
@@ -486,6 +538,18 @@ MonoBehaviour:
       - m_Target: {fileID: 19432163}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432162}
+        m_TargetAssemblyTypeName: QualOIntrumento, Assembly-CSharp
+        m_MethodName: verificaAtivado
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

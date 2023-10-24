@@ -96,6 +96,10 @@ public class QualOIntrumento : MonoBehaviour
             somIntrumentoD.clip =  sonsInstrumentosD[idInstrumento];
             somIntrumentoD.Play();
             svAlt = alternativa;
+        } else if (alternativa == "R")
+        {
+            somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+            somIntrumento.Play();
         }
         
     }
