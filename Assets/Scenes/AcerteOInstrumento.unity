@@ -244,49 +244,49 @@ MonoBehaviour:
   - {fileID: -45031869, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   - {fileID: 176185382, guid: 2d5b488bdecdd7b9b95a5c5ba30fd2c4, type: 3}
   nomesInstrumentosA:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Violao
+  - Clarinete
+  - Bumbo
+  - Clarinete
+  - Guiterra
+  - Violoncelo
+  - Pandeiro
+  - Trompete
+  - Violocelo
+  - Banjo
   nomesInstrumentosB:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Bumbo
+  - Trompete
+  - Violino
+  - Guitarra
+  - Violino
+  - Xilofone
+  - Violino
+  - Trompete
+  - Clarinete
+  - Pandeiro
   nomesInstrumentosC:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Trompete
+  - Bumbo
+  - Pandeiro
+  - Violoncelo
+  - Xilofone
+  - Violino
+  - Xilofone
+  - Banjo
+  - Pandeiro
+  - Xilofone
   nomesInstrumentosD:
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Guiterra
+  - Banjo
+  - Banjo
+  - Trompete
+  - Clarinete
+  - Pandeiro
+  - Violino
+  - Guitarra
+  - Clarinete
+  - Pandeiro
   feedBackErros:
   - {fileID: 137551263}
   - {fileID: 1798306365}

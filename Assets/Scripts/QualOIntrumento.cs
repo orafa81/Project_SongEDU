@@ -9,12 +9,15 @@ using UnityEngine.SceneManagement;
 public class QualOIntrumento : MonoBehaviour
 {
     public string nomeDaCenaAtual;
-    
+    public Button btnInstrumentoA;
+    public Button btnInstrumentoB;
+    public Button btnInstrumentoC;
+    public Button btnInstrumentoD;
     public AudioSource somIntrumento;
-    // public AudioSource somIntrumentoA;
-    // public AudioSource somIntrumentoB;
-    // public AudioSource somIntrumentoC;
-    // public AudioSource somIntrumentoD;
+    public AudioSource somIntrumentoA;
+    public AudioSource somIntrumentoB;
+    public AudioSource somIntrumentoC;
+    public AudioSource somIntrumentoD;
     public Text nomeIntrumento;
     public Text txtPontos;
     public Image instrumentoA;
@@ -24,10 +27,10 @@ public class QualOIntrumento : MonoBehaviour
     
 
     public AudioClip[] sonsInstrumentos;
-    // public AudioClip[] sonsInstrumentosA;
-    // public AudioClip[] sonsInstrumentosB;
-    // public AudioClip[] sonsInstrumentosC;
-    // public AudioClip[] sonsInstrumentosD;
+    public AudioClip[] sonsInstrumentosA;
+    public AudioClip[] sonsInstrumentosB;
+    public AudioClip[] sonsInstrumentosC;
+    public AudioClip[] sonsInstrumentosD;
     public Sprite[] instrumentosA;
     public Sprite[] instrumentosB;
     public Sprite[] instrumentosC;
@@ -70,20 +73,28 @@ public class QualOIntrumento : MonoBehaviour
         if (alternativa == "A")
         {
             nomeIntrumento.text = nomesInstrumentosA[idInstrumento];
+            somIntrumentoA.clip =  sonsInstrumentosA[idInstrumento];
+            somIntrumentoA.Play();
             svAlt = alternativa;
             
         } else if (alternativa == "B")
         {
             nomeIntrumento.text = nomesInstrumentosB[idInstrumento];
+            somIntrumentoB.clip =  sonsInstrumentosB[idInstrumento];
+            somIntrumentoB.Play();
             svAlt = alternativa;
             
         } else if (alternativa == "C")
         {
             nomeIntrumento.text = nomesInstrumentosC[idInstrumento];
+            somIntrumentoC.clip =  sonsInstrumentosC[idInstrumento];
+            somIntrumentoC.Play();
             svAlt = alternativa;
         } else if (alternativa == "D")
         {
             nomeIntrumento.text = nomesInstrumentosD[idInstrumento];
+            somIntrumentoD.clip =  sonsInstrumentosD[idInstrumento];
+            somIntrumentoD.Play();
             svAlt = alternativa;
         }
         
@@ -189,5 +200,8 @@ public class QualOIntrumento : MonoBehaviour
             SceneManager.LoadScene (nomeDaCenaAtual);
         }
     }
+
+    
+
 
 }
