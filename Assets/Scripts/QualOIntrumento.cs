@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 public class QualOIntrumento : MonoBehaviour
 {
     public string nomeDaCenaAtual;
+    public Color colorErro;
+    public GameObject painelResultado;
+    public GameObject menuBtn;
     public Button btnInstrumentoA;
     public Button btnInstrumentoB;
     public Button btnInstrumentoC;
@@ -19,6 +22,7 @@ public class QualOIntrumento : MonoBehaviour
     public AudioSource somIntrumentoC;
     public AudioSource somIntrumentoD;
     public Text nomeIntrumento;
+    public Text txtFeedBack;
     public Text txtPontos;
     public Image instrumentoA;
     public Image instrumentoB;
@@ -43,11 +47,15 @@ public class QualOIntrumento : MonoBehaviour
     public string[] nomesInstrumentosD;
     
     public GameObject[] feedBackErros;
+    public GameObject[] estrelasOn;
 
     private int idInstrumento;
     private int questoes;
     private int pontos;
     private int erros;
+    private int media;
+
+    private float notaFinal;
 
     private string svAlt;
 
@@ -55,9 +63,11 @@ public class QualOIntrumento : MonoBehaviour
     {
         idInstrumento = 0;
         pontos = 0;
+        erros = 0;
         questoes = sonsInstrumentos.Length;
         somIntrumento = GetComponent<AudioSource>();
         somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+        somIntrumento.Play();
         // somIntrumentoA.clip =  sonsInstrumentosA[idInstrumento];
         // somIntrumentoB.clip =  sonsInstrumentosB[idInstrumento];
         // somIntrumentoC.clip =  sonsInstrumentosC[idInstrumento];
@@ -119,6 +129,7 @@ public class QualOIntrumento : MonoBehaviour
                     svAlt = "";
                     nomeIntrumento.text = "Qual é o Instrumento?";
                     somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                    somIntrumento.Play();
                     instrumentoA.sprite = instrumentosA[idInstrumento];
                     instrumentoB.sprite = instrumentosB[idInstrumento];
                     instrumentoC.sprite = instrumentosC[idInstrumento];
@@ -127,6 +138,9 @@ public class QualOIntrumento : MonoBehaviour
                 }
                 else
                 {
+                    Image imagemDoBotao = btnInstrumentoA.GetComponent<Image>();
+                    imagemDoBotao.color = colorErro;
+                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "B")
@@ -138,6 +152,7 @@ public class QualOIntrumento : MonoBehaviour
                     svAlt = "";
                     nomeIntrumento.text = "Qual é o Instrumento?";
                     somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                    somIntrumento.Play();
                     instrumentoA.sprite = instrumentosA[idInstrumento];
                     instrumentoB.sprite = instrumentosB[idInstrumento];
                     instrumentoC.sprite = instrumentosC[idInstrumento];
@@ -145,6 +160,9 @@ public class QualOIntrumento : MonoBehaviour
                     txtPontos.text = "Acertos: " + pontos.ToString();
                 }else
                 {
+                    Image imagemDoBotao = btnInstrumentoB.GetComponent<Image>();
+                    imagemDoBotao.color = colorErro;
+                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "C")
@@ -156,6 +174,7 @@ public class QualOIntrumento : MonoBehaviour
                     svAlt = "";
                     nomeIntrumento.text = "Qual é o Instrumento?";
                     somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                    somIntrumento.Play();
                     instrumentoA.sprite = instrumentosA[idInstrumento];
                     instrumentoB.sprite = instrumentosB[idInstrumento];
                     instrumentoC.sprite = instrumentosC[idInstrumento];
@@ -164,6 +183,9 @@ public class QualOIntrumento : MonoBehaviour
                     
                 } else
                 {
+                    Image imagemDoBotao = btnInstrumentoC.GetComponent<Image>();
+                    imagemDoBotao.color = colorErro;
+                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "D")
@@ -175,6 +197,7 @@ public class QualOIntrumento : MonoBehaviour
                     svAlt = "";
                     nomeIntrumento.text = "Qual é o Instrumento?";
                     somIntrumento.clip =  sonsInstrumentos[idInstrumento];
+                    somIntrumento.Play();
                     instrumentoA.sprite = instrumentosA[idInstrumento];
                     instrumentoB.sprite = instrumentosB[idInstrumento];
                     instrumentoC.sprite = instrumentosC[idInstrumento];
@@ -182,6 +205,9 @@ public class QualOIntrumento : MonoBehaviour
                     txtPontos.text = "Acertos: " + pontos.ToString();
                 } else
                 {
+                    Image imagemDoBotao = btnInstrumentoD.GetComponent<Image>();
+                    imagemDoBotao.color = colorErro;
+                    svAlt = "";
                     erros++;
                 }
             }
@@ -203,7 +229,12 @@ public class QualOIntrumento : MonoBehaviour
                 if (instrumentosA[idInstrumento] == corretos[idInstrumento])
                 {
                     pontos++;
-                    SceneManager.LoadScene ("Menu");
+                    media = (10 * (pontos/questoes)) - (erros * 2);
+                    notaFinal = Mathf.RoundToInt(media);
+                    painelResultado.SetActive(true);
+                    menuBtn.SetActive(false);
+                    functionPainel();
+                    print(notaFinal);
                 }
                 else
                 {
@@ -214,7 +245,12 @@ public class QualOIntrumento : MonoBehaviour
                 if (instrumentosB[idInstrumento] == corretos[idInstrumento])
                 {
                     pontos++;
-                    SceneManager.LoadScene ("Menu");
+                    media = (10 * (pontos/questoes)) - (erros * 2);
+                    notaFinal = Mathf.RoundToInt(media);
+                    painelResultado.SetActive(true);
+                    menuBtn.SetActive(false);
+                    functionPainel();
+                    print(notaFinal);
                 }else
                 {
                     erros++;
@@ -224,7 +260,12 @@ public class QualOIntrumento : MonoBehaviour
                 if (instrumentosC[idInstrumento] == corretos[idInstrumento])
                 {
                     pontos++;
-                    SceneManager.LoadScene ("Menu");
+                    media = (10 * (pontos/questoes)) - (erros * 2);
+                    notaFinal = Mathf.RoundToInt(media);
+                    painelResultado.SetActive(true);
+                    menuBtn.SetActive(false);
+                    functionPainel();
+                    print(notaFinal);
                 } else
                 {
                     erros++;
@@ -234,7 +275,12 @@ public class QualOIntrumento : MonoBehaviour
                 if (instrumentosD[idInstrumento] == corretos[idInstrumento])
                 {
                     pontos++;
-                    SceneManager.LoadScene ("Menu");
+                    media = (10 * (pontos/questoes)) - (erros * 2);
+                    notaFinal = Mathf.RoundToInt(media);
+                    painelResultado.SetActive(true);
+                    menuBtn.SetActive(false);
+                    functionPainel();
+                    print(notaFinal);
                 } else
                 {
                     erros++;
@@ -252,5 +298,26 @@ public class QualOIntrumento : MonoBehaviour
                 SceneManager.LoadScene (nomeDaCenaAtual);
             }
         }  
+    }
+
+    private void functionPainel(){
+        if (notaFinal == 10)
+        {
+            estrelasOn[0].SetActive(true);
+            estrelasOn[1].SetActive(true);
+            estrelasOn[2].SetActive(true);
+            txtFeedBack.text = "Parabens, você é um RockStar!!";
+        }else if (notaFinal > 6 && notaFinal < 10)
+        {
+            estrelasOn[0].SetActive(true);
+            estrelasOn[1].SetActive(true);
+            txtFeedBack.text = "Uuuh, foi quase. Continue tentando!";
+        }
+        else if (notaFinal <= 6 && notaFinal > 0)
+        {
+            estrelasOn[0].SetActive(true);
+            txtFeedBack.text = "Mantenha o foco que voce chega lá.";
+        }
+        
     }
 }

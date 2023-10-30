@@ -293,7 +293,7 @@ TextureImporter:
         width: 664
         height: 164
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -301,6 +301,69 @@ TextureImporter:
       bones: []
       spriteID: 5844bc64adc4106fc9e3f84e8f0cf14f
       internalID: 1787853861
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_9
+      rect:
+        serializedVersion: 2
+        x: 2
+        y: 447
+        width: 518
+        height: 544
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24695866217166e7ab5172a0c210c383
+      internalID: -813501498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_10
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 1444
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7eccf63f5b9b2818a12ac079b9ce0b5
+      internalID: -1831534572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: HUD_11
+      rect:
+        serializedVersion: 2
+        x: 666
+        y: 1444
+        width: 105
+        height: 103
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb3515b8ae0d4efcf99640ee7663a63c
+      internalID: 166359322
       vertices: []
       indices: 
       edges: []
@@ -318,6 +381,8 @@ TextureImporter:
     nameFileIdTable:
       HUD_0: 2065734148
       HUD_1: -1099107471
+      HUD_10: -1831534572
+      HUD_11: 166359322
       HUD_2: 71449259
       HUD_3: 1588152174
       HUD_4: -3120030
@@ -325,6 +390,7 @@ TextureImporter:
       HUD_6: -615623053
       HUD_7: 1787853861
       HUD_8: 548475605
+      HUD_9: -813501498
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
