@@ -18,13 +18,13 @@ public class KeySoundManager : MonoBehaviour
         {
             if (Time.time < currentNoteEndTime)
             {
-                // Uma nota está tocando, vamos substituir pelo novo som
+                // Uma nota estï¿½ tocando, vamos substituir pelo novo som
                 audioSource.Stop();
             }
-
+            print("TESTEANDO");
             audioSource.clip = noteSounds[noteIndex];
             audioSource.Play();
-
+            
             currentNoteEndTime = Time.time + duration;
         }
     }

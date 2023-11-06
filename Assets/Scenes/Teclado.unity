@@ -177,6 +177,28 @@ MonoBehaviour:
   - noteKey: {fileID: 237618323}
     noteDuration: 1
     pressedColor: {r: 0.40392157, g: 0.41568628, b: 0.40392157, a: 1}
+  noteConfigs2:
+  - noteKey: {fileID: 895178624}
+    noteDuration: 0.5
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 267242502}
+    noteDuration: 0.5
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 1609106992}
+    noteDuration: 1
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 2140852025}
+    noteDuration: 1
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 2140852025}
+    noteDuration: 1
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 237618323}
+    noteDuration: 1
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
+  - noteKey: {fileID: 1609106992}
+    noteDuration: 1
+    pressedColor: {r: 0, g: 0, b: 0, a: 0}
   infoPanel: {fileID: 1024018537}
 --- !u!4 &36842987
 Transform:

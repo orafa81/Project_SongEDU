@@ -9,7 +9,8 @@ using UnityEngine.SceneManagement;
 public class QualOIntrumento : MonoBehaviour
 {
     public string nomeDaCenaAtual;
-    public Color colorErro;
+    // public Color colorErro;    /*Atualizações Futuras*/
+    // public Color colorNormal;
     public GameObject painelResultado;
     public GameObject menuBtn;
     public Button btnInstrumentoA;
@@ -135,12 +136,10 @@ public class QualOIntrumento : MonoBehaviour
                     instrumentoC.sprite = instrumentosC[idInstrumento];
                     instrumentoD.sprite = instrumentosD[idInstrumento];
                     txtPontos.text = "Acertos: " + pontos.ToString();
+                    
                 }
                 else
                 {
-                    Image imagemDoBotao = btnInstrumentoA.GetComponent<Image>();
-                    imagemDoBotao.color = colorErro;
-                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "B")
@@ -160,9 +159,6 @@ public class QualOIntrumento : MonoBehaviour
                     txtPontos.text = "Acertos: " + pontos.ToString();
                 }else
                 {
-                    Image imagemDoBotao = btnInstrumentoB.GetComponent<Image>();
-                    imagemDoBotao.color = colorErro;
-                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "C")
@@ -180,12 +176,8 @@ public class QualOIntrumento : MonoBehaviour
                     instrumentoC.sprite = instrumentosC[idInstrumento];
                     instrumentoD.sprite = instrumentosD[idInstrumento];
                     txtPontos.text = "Acertos: " + pontos.ToString();
-                    
                 } else
                 {
-                    Image imagemDoBotao = btnInstrumentoC.GetComponent<Image>();
-                    imagemDoBotao.color = colorErro;
-                    svAlt = "";
                     erros++;
                 }
             } else if (alter == "D")
@@ -205,9 +197,6 @@ public class QualOIntrumento : MonoBehaviour
                     txtPontos.text = "Acertos: " + pontos.ToString();
                 } else
                 {
-                    Image imagemDoBotao = btnInstrumentoD.GetComponent<Image>();
-                    imagemDoBotao.color = colorErro;
-                    svAlt = "";
                     erros++;
                 }
             }

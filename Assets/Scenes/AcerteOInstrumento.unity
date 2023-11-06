@@ -170,7 +170,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCenaAtual: AcerteOInstrumento
-  colorErro: {r: 1, g: 0, b: 0, a: 1}
   painelResultado: {fileID: 1011513920}
   menuBtn: {fileID: 600066632}
   btnInstrumentoA: {fileID: 88734117}

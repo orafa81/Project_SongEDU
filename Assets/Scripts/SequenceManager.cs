@@ -13,11 +13,13 @@ public class SequenceManager : MonoBehaviour
     }
 
     public NoteConfig[] noteConfigs;
+    public NoteConfig[] noteConfigs2;
     private KeySoundManager soundManager;
     private Coroutine sequenceCoroutine;
     private int currentNoteIndex = 0;
     private int incorrectAttempts = 0;
     private int maxIncorrectAttempts = 3;
+    private int rodada = 0;
     private bool isPlaying = false;
     private bool shouldShowInfoPanel = false; // Flag para mostrar o painel de informações
 
@@ -52,7 +54,7 @@ public class SequenceManager : MonoBehaviour
             {
                 StopCoroutine(sequenceCoroutine);
             }
-            sequenceCoroutine = StartCoroutine(PlayNoteSequence());
+            sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
         }
     }
 
@@ -84,24 +86,53 @@ public class SequenceManager : MonoBehaviour
 
         if (!IsRepeating)
         {
-            Debug.Log("Sequência repetida com sucesso!");
-            incorrectAttempts = 0; // Reinicia as tentativas incorretas quando a sequência é repetida corretamente
+            rodada++;
+            print("a rodada é:" + rodada);
+            if (!isPlaying)
+            {
+                isPlaying = true;
+                currentNoteIndex = 0;
+                incorrectAttempts = 0;
+                
+                if (sequenceCoroutine != null)
+                {
+                    StopCoroutine(sequenceCoroutine);
+                }
+                sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
+            }
         }
 
         return true;
     }
 
-    private IEnumerator PlayNoteSequence()
+    private IEnumerator PlayNoteSequence(int round)
     {
-        foreach (var config in noteConfigs)
+        
+        if (round == 0)
         {
-            Color originalColor = config.noteKey.GetComponent<Image>().color;
-            config.noteKey.GetComponent<Image>().color = config.pressedColor;
-            soundManager.PlayNoteSound(config.noteKey.noteIndex, config.noteDuration);
-            yield return new WaitForSeconds(config.noteDuration);
-            config.noteKey.GetComponent<Image>().color = originalColor;
+            foreach (var config in noteConfigs)
+            {
+                Color originalColor = config.noteKey.GetComponent<Image>().color;
+                config.noteKey.GetComponent<Image>().color = config.pressedColor;
+                soundManager.PlayNoteSound(config.noteKey.noteIndex, config.noteDuration);
+                yield return new WaitForSeconds(config.noteDuration);
+                config.noteKey.GetComponent<Image>().color = originalColor;
+            }
+            isPlaying = false;
+        } else if (round == 1)
+        {
+            foreach (var config in noteConfigs2)
+            {
+                Debug.Log("Sequência repetida com sucesso!");
+                Color originalColor = config.noteKey.GetComponent<Image>().color;
+                config.noteKey.GetComponent<Image>().color = config.pressedColor;
+                soundManager.PlayNoteSound(config.noteKey.noteIndex, config.noteDuration);
+                yield return new WaitForSeconds(config.noteDuration);
+                config.noteKey.GetComponent<Image>().color = originalColor;
+            }
+            isPlaying = false;
         }
-        isPlaying = false;
+        
     }
 
     private void RestartSequence()
