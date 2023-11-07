@@ -22,15 +22,21 @@ public class SequenceManager : MonoBehaviour
     private int rodada = 0;
     private bool isPlaying = false;
     private bool shouldShowInfoPanel = false; // Flag para mostrar o painel de informações
+    private float valor;
+    private int erros;
+    private NoteKey meusAcertos;
 
     public GameObject infoPanel; // Adicione uma referência ao painel de informações no Inspector
 
     public bool IsPlayingSequence { get { return isPlaying; } }
     public bool IsRepeating { get { return currentNoteIndex < noteConfigs.Length; } }
 
+    
     private void Start()
     {
         soundManager = FindObjectOfType<KeySoundManager>();
+        valor = 0f;
+        erros = 0;
     }
 
     private void Update()
@@ -60,49 +66,112 @@ public class SequenceManager : MonoBehaviour
 
     public bool CheckPlayerInput(int playerNoteIndex)
     {
-        if (!IsRepeating)
+        if (rodada == 0)
         {
-            Debug.Log("O jogador tentou tocar mais notas do que a sequência alvo.");
-            return false;
-        }
-
-        if (noteConfigs[currentNoteIndex].noteKey.noteIndex != playerNoteIndex)
-        {
-            Debug.Log("Erro! A nota tocada está incorreta.");
-
-            incorrectAttempts++;
-
-            if (incorrectAttempts >= maxIncorrectAttempts)
+            if (!IsRepeating)
             {
-                Debug.Log("Você errou 3 vezes. Reiniciando a sequência.");
-                shouldShowInfoPanel = true; // Defina para exibir o painel de informações após 3 tentativas incorretas
-                RestartSequence();
+                Debug.Log("O jogador tentou tocar mais notas do que a sequência alvo.");
+                return false;
             }
 
-            return false;
-        }
-
-        currentNoteIndex++;
-
-        if (!IsRepeating)
-        {
-            rodada++;
-            print("a rodada é:" + rodada);
-            if (!isPlaying)
+            if (noteConfigs[currentNoteIndex].noteKey.noteIndex != playerNoteIndex)
             {
-                isPlaying = true;
-                currentNoteIndex = 0;
-                incorrectAttempts = 0;
-                
-                if (sequenceCoroutine != null)
+                Debug.Log("Erro! A nota tocada está incorreta.");
+                erros++;
+
+                incorrectAttempts++;
+
+                if (incorrectAttempts >= maxIncorrectAttempts || erros == 3)
                 {
-                    StopCoroutine(sequenceCoroutine);
+                    Debug.Log("Você errou 3 vezes. Reiniciando a sequência.");
+                    valor = 0;
+                    rodada = 0;
+                    shouldShowInfoPanel = true; // Defina para exibir o painel de informações após 3 tentativas incorretas
+                    RestartSequence();
                 }
-                sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
-            }
-        }
 
+                return false;
+            } else if (noteConfigs[currentNoteIndex].noteKey.noteIndex == playerNoteIndex)
+            {
+                valor++;
+                Debug.Log("Numero de acerto: " + valor);
+            }
+
+            currentNoteIndex++;
+
+            if (!IsRepeating)
+            {
+                rodada++;
+                print("a rodada é:" + rodada);
+                if (!isPlaying)
+                {
+                    isPlaying = true;
+                    currentNoteIndex = 0;
+                    incorrectAttempts = 0;
+                    
+                    if (sequenceCoroutine != null)
+                    {
+                        StopCoroutine(sequenceCoroutine);
+                    }
+                    sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
+                }
+            }
+
+            
+        } else if (rodada == 1)
+        {
+            if (!IsRepeating)
+            {
+                Debug.Log("O jogador tentou tocar mais notas do que a sequência alvo.");
+                return false;
+            }
+
+            if (noteConfigs2[currentNoteIndex].noteKey.noteIndex != playerNoteIndex)
+            {
+                Debug.Log("Erro! A nota tocada está incorreta.");
+                erros++;
+                incorrectAttempts++;
+
+                if (incorrectAttempts >= maxIncorrectAttempts || erros == 3)
+                {
+                    Debug.Log("Você errou 3 vezes. Reiniciando a sequência.");
+                    valor = 0;
+                    rodada = 0;
+                    shouldShowInfoPanel = true; // Defina para exibir o painel de informações após 3 tentativas incorretas
+                    RestartSequence();
+                }
+
+                return false;
+            } else if (noteConfigs2[currentNoteIndex].noteKey.noteIndex == playerNoteIndex)
+            {
+                valor++;
+                Debug.Log("Numero de acerto: " + valor);
+            }
+
+            currentNoteIndex++;
+
+            if (!IsRepeating)
+            {
+                rodada++;
+                print("a rodada é:" + rodada);
+                if (!isPlaying)
+                {
+                    isPlaying = true;
+                    currentNoteIndex = 0;
+                    incorrectAttempts = 0;
+                    
+                    if (sequenceCoroutine != null)
+                    {
+                        StopCoroutine(sequenceCoroutine);
+                    }
+                    sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
+                }
+            }
+
+            
+        }
         return true;
+        
     }
 
     private IEnumerator PlayNoteSequence(int round)
@@ -119,11 +188,12 @@ public class SequenceManager : MonoBehaviour
                 config.noteKey.GetComponent<Image>().color = originalColor;
             }
             isPlaying = false;
+            
         } else if (round == 1)
         {
+            yield return new WaitForSeconds(3.0f);
             foreach (var config in noteConfigs2)
             {
-                Debug.Log("Sequência repetida com sucesso!");
                 Color originalColor = config.noteKey.GetComponent<Image>().color;
                 config.noteKey.GetComponent<Image>().color = config.pressedColor;
                 soundManager.PlayNoteSound(config.noteKey.noteIndex, config.noteDuration);

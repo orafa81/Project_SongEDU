@@ -17,6 +17,7 @@ public class NoteKey : MonoBehaviour
     {
         soundManager = FindObjectOfType<KeySoundManager>();
         image = GetComponent<Image>();
+        
     }
 
     private void OnMouseDown()
@@ -28,16 +29,7 @@ public class NoteKey : MonoBehaviour
             StartCoroutine(ResetColorAfterDuration());
 
             // Verifique se a tecla pressionada pelo jogador está correta
-            bool playerInputCorrect = sequenceManager.CheckPlayerInput(noteIndex);
-
-            if (playerInputCorrect)
-            {
-                Debug.Log("Acertou a nota!");
-            }
-            else
-            {
-                Debug.Log("Errou a nota!");
-            }
+            sequenceManager.CheckPlayerInput(noteIndex);
         }
     }
 
