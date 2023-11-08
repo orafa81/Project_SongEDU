@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using TMPro.Examples;
 
 public class SequenceManager : MonoBehaviour
 {
@@ -14,6 +15,10 @@ public class SequenceManager : MonoBehaviour
 
     public NoteConfig[] noteConfigs;
     public NoteConfig[] noteConfigs2;
+    public GameObject vida1;
+    public GameObject vida2;
+    public GameObject vida3;
+    public Text numAcertos;
     private KeySoundManager soundManager;
     private Coroutine sequenceCoroutine;
     private int currentNoteIndex = 0;
@@ -78,7 +83,19 @@ public class SequenceManager : MonoBehaviour
             {
                 Debug.Log("Erro! A nota tocada está incorreta.");
                 erros++;
-
+                if (erros == 1)
+                {
+                    vida3.SetActive(false);
+                }else if (erros == 2)
+                {
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                } else if (erros == 3)
+                {
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                    vida1.SetActive(false); 
+                }
                 incorrectAttempts++;
 
                 if (incorrectAttempts >= maxIncorrectAttempts || erros == 3)
@@ -94,7 +111,7 @@ public class SequenceManager : MonoBehaviour
             } else if (noteConfigs[currentNoteIndex].noteKey.noteIndex == playerNoteIndex)
             {
                 valor++;
-                Debug.Log("Numero de acerto: " + valor);
+                numAcertos.text = "Acertos: " + valor.ToString();
             }
 
             currentNoteIndex++;
@@ -130,6 +147,19 @@ public class SequenceManager : MonoBehaviour
             {
                 Debug.Log("Erro! A nota tocada está incorreta.");
                 erros++;
+                if (erros == 1)
+                {
+                    vida3.SetActive(false);
+                }else if (erros == 2)
+                {
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                } else if (erros == 3)
+                {
+                    vida3.SetActive(false);
+                    vida2.SetActive(false);
+                    vida1.SetActive(false); 
+                }
                 incorrectAttempts++;
 
                 if (incorrectAttempts >= maxIncorrectAttempts || erros == 3)
@@ -145,7 +175,7 @@ public class SequenceManager : MonoBehaviour
             } else if (noteConfigs2[currentNoteIndex].noteKey.noteIndex == playerNoteIndex)
             {
                 valor++;
-                Debug.Log("Numero de acerto: " + valor);
+                numAcertos.text = "Acertos: " + valor.ToString();
             }
 
             currentNoteIndex++;
