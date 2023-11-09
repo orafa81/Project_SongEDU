@@ -15,6 +15,7 @@ public class SequenceManager : MonoBehaviour
 
     public NoteConfig[] noteConfigs;
     public NoteConfig[] noteConfigs2;
+    public NoteConfig[] noteConfigs3;
     public GameObject vida1;
     public GameObject vida2;
     public GameObject vida3;
@@ -29,12 +30,13 @@ public class SequenceManager : MonoBehaviour
     private bool shouldShowInfoPanel = false; // Flag para mostrar o painel de informações
     private float valor;
     private int erros;
+    private float media;
     private NoteKey meusAcertos;
-
     public GameObject infoPanel; // Adicione uma referência ao painel de informações no Inspector
 
     public bool IsPlayingSequence { get { return isPlaying; } }
     public bool IsRepeating { get { return currentNoteIndex < noteConfigs.Length; } }
+    public bool IsRepeating2 { get { return currentNoteIndex < noteConfigs2.Length; } }
 
     
     private void Start()
@@ -42,6 +44,18 @@ public class SequenceManager : MonoBehaviour
         soundManager = FindObjectOfType<KeySoundManager>();
         valor = 0f;
         erros = 0;
+        if (!isPlaying)
+        {
+            isPlaying = true;
+            currentNoteIndex = 0;
+            incorrectAttempts = 0;
+            
+            if (sequenceCoroutine != null)
+            {
+                StopCoroutine(sequenceCoroutine);
+            }
+            sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
+        }
     }
 
     private void Update()
@@ -119,7 +133,7 @@ public class SequenceManager : MonoBehaviour
             if (!IsRepeating)
             {
                 rodada++;
-                print("a rodada é:" + rodada);
+                //print("a rodada é:" + rodada);
                 if (!isPlaying)
                 {
                     isPlaying = true;
@@ -137,7 +151,8 @@ public class SequenceManager : MonoBehaviour
             
         } else if (rodada == 1)
         {
-            if (!IsRepeating)
+            
+            if (!IsRepeating2)
             {
                 Debug.Log("O jogador tentou tocar mais notas do que a sequência alvo.");
                 return false;
@@ -180,26 +195,32 @@ public class SequenceManager : MonoBehaviour
 
             currentNoteIndex++;
 
-            if (!IsRepeating)
+            if (!IsRepeating2)
             {
                 rodada++;
-                print("a rodada é:" + rodada);
-                if (!isPlaying)
-                {
-                    isPlaying = true;
-                    currentNoteIndex = 0;
-                    incorrectAttempts = 0;
+                // print("a rodada é:" + rodada);
+                // if (!isPlaying)
+                // {
+                //     isPlaying = true;
+                //     currentNoteIndex = 0;
+                //     incorrectAttempts = 0;
                     
-                    if (sequenceCoroutine != null)
-                    {
-                        StopCoroutine(sequenceCoroutine);
-                    }
-                    sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
-                }
+                //     if (sequenceCoroutine != null)
+                //     {
+                //         StopCoroutine(sequenceCoroutine);
+                //     }
+                //     sequenceCoroutine = StartCoroutine(PlayNoteSequence(rodada));
+                // }
+                int numSequencias = noteConfigs.Length + noteConfigs2.Length;
+                float notaFinal;
+                media = (10 * (valor/numSequencias)) - (erros * 2);
+                notaFinal = Mathf.RoundToInt(media);
+                Debug.Log("Minha nota final: " + notaFinal);
+                
             }
 
             
-        }
+        } 
         return true;
         
     }
@@ -209,6 +230,7 @@ public class SequenceManager : MonoBehaviour
         
         if (round == 0)
         {
+            yield return new WaitForSeconds(3.0f);
             foreach (var config in noteConfigs)
             {
                 Color originalColor = config.noteKey.GetComponent<Image>().color;
@@ -231,7 +253,7 @@ public class SequenceManager : MonoBehaviour
                 config.noteKey.GetComponent<Image>().color = originalColor;
             }
             isPlaying = false;
-        }
+        } 
         
     }
 
@@ -267,5 +289,7 @@ public class SequenceManager : MonoBehaviour
             StartNoteSequence();
         }
     }
+
+    
 }
 
