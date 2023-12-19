@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 19432163}
   - component: {fileID: 19432162}
   - component: {fileID: 19432164}
+  - component: {fileID: 19432165}
   m_Layer: 0
   m_Name: Teste
   m_TagString: Untagged
@@ -170,6 +171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nomeDaCenaAtual: AcerteOInstrumento
+  idFase: 1
   painelResultado: {fileID: 1011513920}
   menuBtn: {fileID: 600066632}
   btnInstrumentoA: {fileID: 88734117}
@@ -459,6 +461,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   btnConfirma: {fileID: 1704285745}
+--- !u!114 &19432165
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 19432159}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9649e60cdd4856cd9b50c16e0eff3db0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  painelFases1: {fileID: 0}
+  painelFases2: {fileID: 0}
+  btnModos: {fileID: 0}
+  textPontos: {fileID: 0}
+  estrelaOn1: {fileID: 0}
+  estrelaOn2: {fileID: 0}
+  estrelaOn3: {fileID: 0}
 --- !u!1 &27595252
 GameObject:
   m_ObjectHideFlags: 0
@@ -1375,6 +1396,18 @@ MonoBehaviour:
       - m_Target: {fileID: 19432163}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 19432165}
+        m_TargetAssemblyTypeName: ControllerFasePiano, Assembly-CSharp
+        m_MethodName: testePontos
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -9,6 +9,7 @@ using UnityEngine.SceneManagement;
 public class QualOIntrumento : MonoBehaviour
 {
     public string nomeDaCenaAtual;
+    public int idFase;
     // public Color colorErro;    /*Atualizações Futuras*/
     // public Color colorNormal;
     public GameObject painelResultado;
@@ -51,12 +52,13 @@ public class QualOIntrumento : MonoBehaviour
     public GameObject[] estrelasOn;
 
     private int idInstrumento;
+    
     private int questoes;
     private int pontos;
     private int erros;
     private int media;
 
-    private float notaFinal;
+    private int notaFinal;
 
     private string svAlt;
 
@@ -223,7 +225,8 @@ public class QualOIntrumento : MonoBehaviour
                     painelResultado.SetActive(true);
                     menuBtn.SetActive(false);
                     functionPainel();
-                    print(notaFinal);
+                    PlayerPrefs.SetInt("PontuacaoQuiz" + idFase.ToString(), notaFinal);
+                    PlayerPrefs.Save();
                 }
                 else
                 {
@@ -239,7 +242,8 @@ public class QualOIntrumento : MonoBehaviour
                     painelResultado.SetActive(true);
                     menuBtn.SetActive(false);
                     functionPainel();
-                    print(notaFinal);
+                    PlayerPrefs.SetInt("PontuacaoQuiz" + idFase.ToString(), notaFinal);
+                    PlayerPrefs.Save();
                 }else
                 {
                     erros++;
@@ -254,7 +258,8 @@ public class QualOIntrumento : MonoBehaviour
                     painelResultado.SetActive(true);
                     menuBtn.SetActive(false);
                     functionPainel();
-                    print(notaFinal);
+                    PlayerPrefs.SetInt("PontuacaoQuiz" + idFase.ToString(), notaFinal);
+                    PlayerPrefs.Save();
                 } else
                 {
                     erros++;
@@ -269,7 +274,8 @@ public class QualOIntrumento : MonoBehaviour
                     painelResultado.SetActive(true);
                     menuBtn.SetActive(false);
                     functionPainel();
-                    print(notaFinal);
+                    PlayerPrefs.SetInt("PontuacaoQuiz" + idFase.ToString(), notaFinal);
+                    PlayerPrefs.Save();
                 } else
                 {
                     erros++;
